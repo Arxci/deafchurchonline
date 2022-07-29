@@ -1,34 +1,10 @@
 import React from 'react'
+import HamburgerBTN from '../global/HamburgerBTN'
 
-export default function Sidebar({ status, ToggleMenu }) {
+export default function sidebar({sidebarState, toggleSidebar}) {
   return (
-    <div className={'sidebar ' + status}>
-            <div className={'sidebar__background ' + status } onClick={() => ToggleMenu()}/>
-            <div className='sidebar__title'>
-                <a href="/" onClick={() => ToggleMenu()}>Deaf Church Online</a>
-            </div>
-            <ul className='sidebar__list'>
-                <li>
-                    <a href="/" onClick={() => ToggleMenu()}>Home</a>
-                    <div className='divider'/>
-                </li>
-                <li>
-                    <a href="/about" onClick={() => ToggleMenu()}>About</a>
-                    <div className='divider'/>
-                </li>
-                <li>
-                    <a href="/gallery" onClick={() => ToggleMenu()}>Gallery</a>
-                    <div className='divider'/>
-                </li>
-                <li>
-                    <a href="/contact" onClick={() => ToggleMenu()}>Contact</a>
-                    <div className='divider'/>
-                </li>
-                <li>
-                    <a href="/donations" onClick={() => ToggleMenu()}>Donations</a>
-                    <div className='divider'/>
-                </li>
-            </ul>
+    <div className={'sidebar ' + sidebarState}>
+        <HamburgerBTN open={true} toggleSidebar={toggleSidebar}/>
     </div>
   )
 }

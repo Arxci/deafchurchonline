@@ -1,0 +1,14 @@
+.button{
+
+    &__cta {
+        width: max-content;
+        background-color: $orange;
+        padding: 1rem 2rem;
+        color: $black;
+        font-weight: bold;
+
+        &:hover {
+            filter: brightness(1.25);
+        }
+    }
+}

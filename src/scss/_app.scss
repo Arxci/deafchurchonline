@@ -1,27 +1,15 @@
 .app {
-    display: grid;
-    height: 100%;
-    width: 100%;
-    background-color: $lightGrey;
+    height: 100vh;
+    min-height: max-content;
 
-    &.active {
-        overflow: hidden;
-        touch-action: none;
-
-    }
 }
 
 .screen {
-    height: 100vh;
-    width: 100vw;
-    min-height: max-content;
     display: flex;
     justify-content: center;
-    position: relative;
-    margin-top: 10rem;
-
-    > div {
-        width: 100%;
-        height: 100%;
-    }
+    width: 100vw;
+    height: max-content;
+    min-height: 800px;
+    background-color: $blue;
+    padding-top: 7rem;
 }

@@ -1,0 +1,38 @@
+.banner {
+    width: 100vw;
+    height: max-content;
+    background-color: $white;
+    margin: 2rem;
+    display: flex;
+    justify-content: center;
+
+    &__content {
+        max-width: 50rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 20px;
+        height: max-content;
+        min-height: 20rem;
+    }
+
+    &__subtext, &__title {
+        color: $black;
+    }
+
+    &__title {
+        font-size: 2rem;
+        flex: .5;
+    }
+
+    &__subtext {
+        flex: 1;
+        color: $paragraphColor;
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+
+    &__btn {
+        flex: .5
+    }
+}
