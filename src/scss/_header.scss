@@ -25,8 +25,13 @@
         flex: 1;
 
         > a {
-            font-size: 2rem;
+            font-size: clamp(1rem, 5vw, 2rem);
             font-weight: bold;
+            transition: color 350ms ease;
+
+            &:hover, &:focus {
+                color: $orange;
+            }
         }
     }
 
@@ -57,7 +62,7 @@
                 transition: transform 300ms ease;
             }
 
-            &:hover {
+            &:hover, &:focus {
                 &::before {
                     transform-origin: left;
                     transform: scaleX(1);

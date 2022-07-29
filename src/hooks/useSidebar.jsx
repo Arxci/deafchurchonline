@@ -8,7 +8,10 @@ export default function useSidebar() {
     const toggleSidebar = () => {
         console.log(sidebarState)
         if (sidebarState === "") {
+            const top = window.scrollY
+            console.log(top)
             setSidebarState('open');
+            window.scrollTo(0, top);
             return;
         }
         setSidebarState('');

@@ -7,7 +7,7 @@ export default function Header({ toggleSidebar, sidebarState, currentHeaderIndex
 
     return (
         <header className='header'>
-            <Sidebar sidebarState={sidebarState} toggleSidebar={toggleSidebar}/>
+            <Sidebar sidebarState={sidebarState} toggleSidebar={toggleSidebar} currentHeaderIndex={currentHeaderIndex}/>
             <nav className='header__nav container__L padding__aL'>
                 <ul className='header__list'>
                     <li className='header__logo'>

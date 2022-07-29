@@ -13,13 +13,17 @@
     &__title {
         display: flex;
         flex-wrap: wrap;
-        column-gap: 20px;
+        column-gap: 5px;
         justify-content: center;
         width: 100%;
         text-align: center;
-        font-size: 4rem;
+        font-size: clamp(1.5rem, 5vw, 4rem);
         margin-top: 5rem;
         margin-bottom: 10rem;
+
+        @include breakpoint-down(medium) {
+
+        }
 
         > span:nth-child(2) {
             color: $orange;
@@ -28,7 +32,7 @@
     }
 
     &__about {
-        background-color: $grey;
+        background-color: $lighterBlue;
         height: 30rem;
         width: 100%;
     }

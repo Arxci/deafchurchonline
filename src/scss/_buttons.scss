@@ -7,7 +7,7 @@
         color: $black;
         font-weight: bold;
 
-        &:hover {
+        &:hover, &:focus {
             filter: brightness(1.25);
         }
     }
