@@ -1,0 +1,69 @@
+.sidebar {
+    position: fixed;
+    display: block;
+    top: 0;
+    left: -500px;
+    height: 100vh;
+    width: 100vw;
+    max-width: 400px;
+    min-width: 250px;
+    background-color: $white;
+    box-shadow: 5px 10px 15px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    transition: left 150ms ease;
+
+    &.active {
+        left: 0;
+    }
+
+    &__background {
+        content: '';
+        position: absolute;
+        background-color: $black;
+        opacity: .2;
+        width: 200vw;
+        height: 100%;
+        top: 0;
+        left: -200vw;
+        z-index: 1;
+
+        &.active {
+            left: 100%;
+        }
+    }
+
+    &__title {
+        width: 100%;
+        font-size: 2.5rem;
+        font-weight: bold;
+        height: 8rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        @include breakpoint-down(small) {
+            font-size: clamp(1rem, 05vw, 1.5rem);
+        }
+
+        > a {
+            color: $blue;
+        }
+    }
+
+    &__list {
+        z-index: 2;
+
+        > li {
+
+            > a {
+                display: flex;
+                padding: 1rem 0;
+                justify-content: center;
+
+                &:hover {
+                    background-color: $fadedGrey;
+                }
+            }
+        }
+    }
+}
