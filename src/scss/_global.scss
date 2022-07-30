@@ -9,11 +9,23 @@
     font-family: 'Catamaran', sans-serif;
     outline: none;
     border: none;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 
 html {
     font-size: 100%;
 }
+
+body {
+    overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+
 
 .hamburger__btn {
     display: flex;
@@ -109,18 +121,17 @@ html {
     }
 
     &__l {
-        padding-left: 2rem;
 
         &L {
-
+            padding-left: 2rem;
         }
 
         &M {
-
+            padding-left: 1rem;
         }
 
         &S {
-
+            padding-left: 0.5rem;
         }
     }
 

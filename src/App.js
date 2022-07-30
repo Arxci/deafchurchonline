@@ -8,8 +8,13 @@ import Contact from './components/pages/Contact';
 import Donations from './components/pages/Donations';
 import useSidebar from './hooks/useSidebar';
 import useHeader from './hooks/useHeader';
+import Aos from "aos";
 
 function App() {
+
+  useEffect(() => {
+    Aos.init({ duration: 750 });
+  }, []);
 
   const {toggleSidebar, sidebarState} = useSidebar();
   const {setCurrentHeaderIndex, currentHeaderIndex} = useHeader();
