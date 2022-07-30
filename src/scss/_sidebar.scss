@@ -10,7 +10,7 @@
 
     &.open {
         right: 0;
-        box-shadow: -5px 10px 15px rgba(0 , 0, 0, 0.2);
+        box-shadow: -5px 10px 15px $fadedBlack;
     }
 
     &__background {
@@ -52,7 +52,7 @@
             color: $black;
             font-size: 1.25rem;
 
-            &:hover {
+            &:hover, &:focus {
                 background-color: $fadedGrey;
             }
 

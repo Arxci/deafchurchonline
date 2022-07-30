@@ -33,7 +33,72 @@
 
     &__about {
         background-color: $lighterBlue;
-        height: 30rem;
+        height: max-content;
         width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 5rem 0;
+
+        &__list {
+            display: flex;
+            width: 100%;
+            gap: 10px;
+
+            @include breakpoint-down(medium) {
+                flex-direction: column;
+            }
+        }
+
+        &__left, &__right {
+            @include breakpoint-up(large) {
+                flex: 1;
+            }
+        }
+
+        &__right {
+            background: url('https://images.pexels.com/photos/2919738/pexels-photo-2919738.jpeg');
+            background-size: cover;
+            background-repeat: no-repeat;
+
+            @include breakpoint-down(medium) {
+                height: clamp(500px, 100vw, 800px);
+                width: 90%;
+                min-width: 250px;
+                margin: auto;
+            }
+        }
+
+        &__imageBTN {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            background-color: $fadedBlack;
+        }
+
+        &__subtitle, &__title, &__text {
+            @include breakpoint-down(medium) {
+                width: 90%;
+                margin: auto;
+            }
+        }
+
+        &__subtitle {
+            color: $orange;
+            font-size: 0.8625rem;
+            font-weight: bold;
+        }
+
+        &__title {
+            color: $headerColor;
+            font-size: 2rem;
+        }
+
+        &__text {
+            color: $paragraphColor;
+        }
     }
 }
