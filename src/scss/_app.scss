@@ -2,15 +2,15 @@
     height: 100vh;
     width: 100vw;
     min-height: max-content;
+    background-color: $blue;
 }
 
 .screen {
     display: flex;
     justify-content: center;
     width: 100%;
-    height: max-content;
+    height: 100vh;
     min-height: 800px;
-    background-color: $blue;
-    padding-top: 9rem;
 
+    padding-top: 9rem;
 }
