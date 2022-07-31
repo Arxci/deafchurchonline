@@ -73,34 +73,6 @@ body::-webkit-scrollbar {
   display: none;
 }
 
-.hamburger__btn {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 5px;
-  cursor: pointer;
-}
-.hamburger__btn > span {
-  background-color: #000000;
-  width: 30px;
-  height: 3px;
-  transform-origin: left;
-  transition: all 150ms ease;
-}
-.hamburger__btn > span:nth-child(2) {
-  transform: scaleX(0.5);
-  transform-origin: right;
-}
-.hamburger__btn.active > span:nth-child(1) {
-  transform: rotate(45deg) translateY(-4px);
-}
-.hamburger__btn.active > span:nth-child(2) {
-  opacity: 0;
-}
-.hamburger__btn.active > span:nth-child(3) {
-  transform: rotate(-45deg) translateY(4px);
-}
-
 .padding__aL {
   padding: 2rem;
 }
@@ -205,7 +177,7 @@ body::-webkit-scrollbar {
   justify-content: center;
   width: 100vw;
   height: auto;
-  background-color: #0B172A;
+  background-color: rgba(11, 23, 42, 0.95);
   z-index: 999;
 }
 .header__nav {
@@ -279,7 +251,7 @@ body::-webkit-scrollbar {
   height: max-content;
   min-height: 800px;
   background-color: #0B172A;
-  padding-top: 7rem;
+  padding-top: 9rem;
 }
 
 .sidebar {
@@ -316,10 +288,14 @@ body::-webkit-scrollbar {
   gap: 20px;
   align-items: center;
   justify-content: space-between;
-  padding: 2rem 0;
-  width: 100%;
+  width: 90%;
   height: calc(100% - 20rem);
   z-index: 1;
+  padding: 2rem 0;
+  margin: auto;
+}
+.sidebar__btn {
+  width: 100%;
 }
 .sidebar__links {
   width: 100%;
@@ -330,6 +306,7 @@ body::-webkit-scrollbar {
   width: 100%;
   text-align: center;
   color: #000000;
+  padding: 1rem 0;
   font-size: 1.25rem;
 }
 .sidebar__links > a:hover, .sidebar__links > a:focus {
@@ -359,7 +336,7 @@ body::-webkit-scrollbar {
   text-align: center;
   font-size: clamp(1.5rem, 5vw, 4rem);
   margin-top: 5rem;
-  margin-bottom: 10rem;
+  margin-bottom: 5rem;
 }
 .home__title > span:nth-child(2) {
   color: #BC4123;
@@ -445,6 +422,37 @@ body::-webkit-scrollbar {
 }
 .button__cta:hover, .button__cta:focus {
   background-color: #e34f2b;
+}
+.button__hamburger {
+  display: flex;
+  background: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  cursor: pointer;
+}
+.button__hamburger:hover > span, .button__hamburger:focus > span {
+  background-color: #BC4123;
+}
+.button__hamburger > span {
+  background-color: #000000;
+  width: 30px;
+  height: 3px;
+  transform-origin: left;
+  transition: all 150ms ease;
+}
+.button__hamburger > span:nth-child(2) {
+  transform: scaleX(0.5);
+  transform-origin: right;
+}
+.button__hamburger.active > span:nth-child(1) {
+  transform: rotate(45deg) translateY(-4px);
+}
+.button__hamburger.active > span:nth-child(2) {
+  opacity: 0;
+}
+.button__hamburger.active > span:nth-child(3) {
+  transform: rotate(-45deg) translateY(4px);
 }
 
 .banner {

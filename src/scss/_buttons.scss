@@ -11,4 +11,46 @@
             background-color: $lighterOrange
         }
     }
+
+    &__hamburger {
+        display: flex;
+        background: none;
+        flex-direction: column;
+        justify-content: center;
+        gap: 5px;
+        cursor: pointer;
+
+        &:hover, &:focus {
+            > span {
+                background-color: $orange;
+            }
+        }
+    
+        > span {
+            background-color: $black;
+            width: 30px;
+            height: 3px;
+            transform-origin: left;
+            transition: all 150ms ease;
+        }
+    
+        > span:nth-child(2) {
+            transform: scaleX(.5);
+            transform-origin: right;
+        }
+    
+        &.active {
+            > span:nth-child(1) {
+                transform: rotate(45deg) translateY(-4px);
+            }
+    
+            > span:nth-child(2) {
+                opacity: 0;
+            }
+    
+            > span:nth-child(3) {
+                transform: rotate(-45deg) translateY(4px);
+            }
+        }
+    }
 }

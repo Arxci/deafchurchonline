@@ -1,13 +1,15 @@
 import React from 'react'
-import HamburgerBTN from '../global/HamburgerBTN'
+import ButtonHamburger from '../global/ButtonHamburger'
 import ButtonCTA from '../global/ButtonCTA'
 
 export default function sidebar({sidebarState, toggleSidebar, currentHeaderIndex}) {
   return (
     <div className={'sidebar ' + sidebarState}>
         <div className={'sidebar__background ' + sidebarState} onClick={() => toggleSidebar()}/>
-        <HamburgerBTN open={true} toggleSidebar={toggleSidebar}/>
         <ul className='sidebar__list'>
+          <li className='sidebar__btn'>
+            <ButtonHamburger open={true} toggleSidebar={toggleSidebar}/>
+          </li>
           <li  className='sidebar__links'>
             <a href='/' className={currentHeaderIndex === 1 ? 'sidebar__current__page' : ''}>
               Home

@@ -1,6 +1,6 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import ButtonCTA from '../global/ButtonCTA'
-import HamburgerBTN from '../global/HamburgerBTN'
+import ButtonHamburger from '../global/ButtonHamburger'
 import Sidebar from './Sidebar'
 
 export default function Header({ toggleSidebar, sidebarState, currentHeaderIndex }) {
@@ -28,7 +28,9 @@ export default function Header({ toggleSidebar, sidebarState, currentHeaderIndex
                     <li className='header__link hide-for-mobile'>
                         <ButtonCTA buttonLink={'/donations'} buttonText={'DONATIONS'}/>
                     </li>
-                    <HamburgerBTN open={false} toggleSidebar={toggleSidebar}/>
+                    <li className='header__link hide-for-desktop'>
+                        <ButtonHamburger open={false} toggleSidebar={toggleSidebar}/>
+                    </li>
                 </ul>
             </nav>
         </header>

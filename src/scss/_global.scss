@@ -25,43 +25,6 @@ body::-webkit-scrollbar {
     display: none;
 }
 
-
-
-.hamburger__btn {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 5px;
-    cursor: pointer;
-
-    > span {
-        background-color: $black;
-        width: 30px;
-        height: 3px;
-        transform-origin: left;
-        transition: all 150ms ease;
-    }
-
-    > span:nth-child(2) {
-        transform: scaleX(.5);
-        transform-origin: right;
-    }
-
-    &.active {
-        > span:nth-child(1) {
-            transform: rotate(45deg) translateY(-4px);
-        }
-
-        > span:nth-child(2) {
-            opacity: 0;
-        }
-
-        > span:nth-child(3) {
-            transform: rotate(-45deg) translateY(4px);
-        }
-    }
-}
-
 .padding {
 
     &__a {
